@@ -1,0 +1,12 @@
+{
+  "name": "landmark",
+  "description": "",
+  "cameraUp": [
+    0,
+    -1,
+    0
+  ],
+  "eyeHeight": 1,
+  "waypoints": [],
+  "hotspots": []
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "landmark",
+    "name": "landmark",
+    "description": "",
+    "thumbnail": null,
+    "model": "/scenes/landmark/model.ply",
+    "config": "/scenes/landmark/scene.json"
+  },
+  {
+    "id": "tuong-phat",
+    "name": "tuong-phat",
+    "description": "",
+    "thumbnail": null,
+    "model": "/scenes/tuong-phat/point_cloud.ply",
+    "config": "/scenes/tuong-phat/scene.json"
+  }
+]

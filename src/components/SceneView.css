@@ -1,0 +1,54 @@
+.sv { position: fixed; inset: 0; background: #111; color: #fff; }
+.sv-canvas { position: absolute; inset: 0; }
+.sv-canvas.picking { cursor: crosshair; }
+.sv button, .sv input, .sv textarea { font: inherit; }
+.sv-top, .sv-title, .sv-modes, .sv-hint, .sv-edit, .sv-card, .sv-form, .sv-toast { position: absolute; z-index: 5; }
+.sv-top { top: 14px; left: 14px; display: flex; gap: 8px; }
+.sv-top button { padding: 8px 14px; border-radius: 8px; border: 0; background: rgba(20,22,28,.85); color: #fff; cursor: pointer; }
+.sv-top button.on { background: #3ecf9e; color: #04281d; }
+.sv-title { top: 18px; left: 50%; transform: translateX(-50%); text-shadow: 0 1px 4px #000; font-weight: 600; }
+.sv-toast { top: 62px; left: 50%; transform: translateX(-50%); background: rgba(20,22,28,.92); padding: 8px 14px; border-radius: 8px; font-size: 14px; }
+
+.sv-layer { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 3; }
+.sv-layer > * { position: absolute; left: 0; top: 0; pointer-events: auto; }
+.sv-ring { width: 46px; height: 46px; border-radius: 50%; border: 3px solid #fff; background: rgba(255,255,255,.2); cursor: pointer; padding: 0; }
+.sv-ring:hover { background: rgba(255,255,255,.45); }
+.sv-ring.cur, .sv-layer.mode-orbit .sv-ring { display: none !important; }
+.sv-layer.mode-orbit.editing .sv-ring { display: block !important; border-color: #ffd27a; }
+
+.sv-dot { width: 28px; height: 28px; border-radius: 50%; border: 2px solid #fff; background: rgba(0,0,0,.35); cursor: pointer; padding: 0; animation: pulse 2s infinite; }
+.sv-dot::after { content: ''; position: absolute; left: 50%; top: 50%; width: 10px; height: 10px; border-radius: 50%; background: #fff; transform: translate(-50%, -50%); }
+.sv-dot:hover { background: rgba(62,207,158,.6); }
+.sv-dot.draft { border-color: #ffd27a; }
+.sv-tip { position: absolute; left: 50%; bottom: 36px; transform: translateX(-50%); white-space: nowrap; background: rgba(20,22,28,.92); color: #fff; padding: 4px 10px; border-radius: 6px; font-size: 12px; display: none; }
+.sv-dot:hover .sv-tip { display: block; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,.55); } 100% { box-shadow: 0 0 0 14px rgba(255,255,255,0); } }
+
+.sv-modes { bottom: 18px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; background: rgba(20,22,28,.85); padding: 6px; border-radius: 12px; }
+.sv-modes button { padding: 8px 12px; border: 0; border-radius: 8px; background: transparent; color: #fff; cursor: pointer; }
+.sv-modes button.on { background: #3ecf9e; color: #04281d; }
+.sv-modes button:disabled { opacity: .35; cursor: default; }
+.sv-hint { bottom: 70px; left: 50%; transform: translateX(-50%); font-size: 13px; background: rgba(20,22,28,.85); padding: 6px 12px; border-radius: 8px; }
+
+.sv-card { right: 16px; bottom: 80px; width: 300px; background: rgba(20,22,28,.92); border-radius: 12px; padding: 14px 16px; }
+.sv-card img { width: 100%; border-radius: 8px; }
+.sv-x { position: absolute; top: 6px; right: 8px; border: 0; background: none; color: #fff; font-size: 20px; cursor: pointer; }
+
+.sv-edit { top: 14px; right: 14px; width: 250px; max-height: calc(100% - 100px); overflow: auto; display: flex; flex-direction: column; gap: 6px; background: rgba(20,22,28,.92); padding: 10px; border-radius: 10px; }
+.sv-edit button, .sv-form button { padding: 6px 10px; border: 0; border-radius: 6px; background: #2a2f3a; color: #fff; cursor: pointer; }
+.sv-edit button.on, .sv-form button.ok { background: #3ecf9e; color: #04281d; }
+.sv-save { font-size: 12px; opacity: .8; }
+.sv-save.saved { color: #7ff0c3; opacity: 1; }
+.sv-save.error { color: #ff8a8a; opacity: 1; }
+.sv-eye { font-size: 13px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.sv-eye input { width: 70px; }
+.sv-list small { display: block; margin: 8px 0 4px; opacity: .6; }
+.row { display: flex; gap: 6px; align-items: center; margin-bottom: 4px; }
+.row span { flex: 1; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.sv-form { left: 14px; bottom: 80px; width: 290px; display: flex; flex-direction: column; gap: 8px; background: rgba(20,22,28,.95); padding: 12px; border-radius: 12px; }
+.sv-form input, .sv-form textarea { background: #12151b; color: #fff; border: 1px solid #333a47; border-radius: 6px; padding: 6px 8px; resize: vertical; }
+
+.sv-loading { position: absolute; z-index: 6; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 240px; text-align: center; }
+.sv-loading div { height: 6px; background: #3ecf9e; border-radius: 3px; margin-bottom: 8px; }
+.sv-error { position: absolute; z-index: 6; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #5a1d1d; padding: 12px 16px; border-radius: 8px; }

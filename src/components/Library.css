@@ -1,0 +1,21 @@
+.lib-page {
+  min-height: 100%;
+  background:
+    linear-gradient(180deg, rgba(8, 20, 16, 0.45), rgba(15, 17, 21, 0.96) 85%),
+    url('/bg.jpg') center / cover fixed,
+    radial-gradient(circle at 15% 10%, #1f6f54 0, transparent 45%),
+    radial-gradient(circle at 85% 0%, #2b5aa8 0, transparent 40%),
+    #0f1115;
+}
+.lib { max-width: 960px; margin: 0 auto; padding: 56px 20px 40px; }
+.lib h1 { font-size: 44px; margin: 0; letter-spacing: 0.5px; }
+.lib-sub { opacity: 0.8; margin: 8px 0 0; }
+.lib-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; margin-top: 28px; }
+.lib-card { position: relative; background: rgba(26, 29, 36, 0.78); backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; overflow: hidden; transition: transform 0.2s, border-color 0.2s; }
+.lib-card:hover { transform: translateY(-4px); border-color: #3ecf9e; }
+.lib-open { display: block; width: 100%; text-align: left; background: none; border: 0; color: #fff; padding: 0; cursor: pointer; }
+.lib-edit { position: absolute; top: 10px; right: 10px; padding: 6px 10px; border-radius: 8px; border: 0; background: rgba(20, 22, 28, 0.85); color: #fff; cursor: pointer; font-size: 13px; }
+.lib-edit:hover { background: #3ecf9e; color: #04281d; }
+.lib-thumb { height: 160px; background: linear-gradient(135deg, #1f6f54, #2b5aa8) center / cover; }
+.lib-name { padding: 12px 14px 2px; font-weight: 600; }
+.lib-desc { padding: 0 14px 14px; font-size: 13px; opacity: 0.75; }
